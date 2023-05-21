@@ -1,0 +1,49 @@
+.settings-page {
+  padding: 10px;
+}
+
+.top-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.top-panel-title {
+  text-align: center;
+  flex-grow: 1;
+}
+
+.cancel-text {
+  text-align: right;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.settings-list {
+  margin-top: 10px;
+}
+
+.setting-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  margin-bottom: 10px;
+}
+
+.setting-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.setting-title {
+  flex-grow: 1;
+  margin-left: 15px;
+}
+
+.arrow-icon {
+  margin-left: 10px;
+}

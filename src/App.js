@@ -1,24 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Navigate, Routes } from "react-router-dom";
+
+import LoginPage from "./login/LoginPage";
+import Home from "./home/Home";
+import AddReminder from "./add/AddReminder";
+import Settings from "./settings/Settings";
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" element={<LoginPage />} exact />
+      <Route
+        path="/home"
+        element={
+          <div className="column">
+            <Home />
+          </div>
+        }
+        exact
+      />
+      <Route
+        path="/add"
+        element={
+          <div className="column">
+            <AddReminder />
+          </div>
+        }
+        exact
+      />
+      <Route
+        path="/settings"
+        element={
+          <div className="column">
+            <Settings />
+          </div>
+        }
+        exact
+      />
+      <Route path="*" element={<Navigate to="/" />} />
+    </Routes>
   );
 }
 
