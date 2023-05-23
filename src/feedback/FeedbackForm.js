@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 
 import Modal from "../modal/Modal";
+import DataContext from "../data/data-context";
 import "./FeedbackForm.css";
 
 const FeedbackForm = ({ onClose, openModal }) => {
   const [feedback, setFeedback] = useState("");
+
+  const dataCtx = useContext(DataContext);
 
   const handleFeedbackChange = (event) => {
     const text = event.target.value;
@@ -15,13 +18,38 @@ const FeedbackForm = ({ onClose, openModal }) => {
     }
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
     // Close the form after submitting feedback
     if (feedback.length >= 20) {
-      openModal();
-      onClose();
+      await fetch(
+        `${process.env.REACT_APP_backendUrl}/api/users/${dataCtx.user.uid}/feedback`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${dataCtx.user.accessToken}`,
+          },
+          body: JSON.stringify({ feedback: feedback }),
+        }
+      )
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Network response was not ok");
+          }
+          return response.json();
+        })
+        .then((data) => {
+          openModal();
+          onClose();
+        })
+        .catch((error) => {
+          console.error(
+            "There has been a problem with your fetch operation:",
+            error
+          );
+        });
     } else {
       alert("Please provide at least 20 characters.");
     }

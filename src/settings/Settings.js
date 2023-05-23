@@ -11,7 +11,7 @@ import "./Settings.css";
 const Settings = () => {
   const [isUpgradePopupOpen, setIsUpgradePopupOpen] = useState(false);
   const [isFeedbackFormOpen, setIsFeedbackFormOpen] = useState(false);
-  const [isLogoutModalOpen, setIsLogoutModalOpen] = useState(false);
+  //const [isLogoutModalOpen, setIsLogoutModalOpen] = useState(false);
   const [isConactModalOpen, setIsContactModalOpen] = useState(false);
   const [isSuccessModalOpen, setIsSuccessModalOpen] = useState(false);
   const [isFeedbackSuccessModalOpen, setIsFeedbackSuccessModalOpen] =
@@ -19,7 +19,7 @@ const Settings = () => {
 
   const dataCtx = useContext(DataContext);
   const userProfile = dataCtx.userProfile;
-  const handleLogout = dataCtx.handleLogout;
+  //const handleLogout = dataCtx.handleLogout;
 
   const openUpgradePopup = () => {
     setIsUpgradePopupOpen(true);
@@ -57,7 +57,7 @@ const Settings = () => {
   // This function will be used to hide the FeedbackSuccessModal
   const closeFeedbackSuccessModal = () => setIsFeedbackSuccessModalOpen(false);
 
-  const openLogoutModal = () => {
+  /*const openLogoutModal = () => {
     setIsLogoutModalOpen(true);
   };
 
@@ -68,7 +68,7 @@ const Settings = () => {
   const confirmLogout = () => {
     closeLogoutModal();
     handleLogout();
-  };
+  };*/
 
   return (
     <>
@@ -102,16 +102,16 @@ const Settings = () => {
         <Modal
           onClose={closeContactModal}
           title="Contact Us"
-          content="Email: birthdayaiapp@gmail.com"
+          content="Email: contact@birthdayaiapp.com"
         />
       )}
-      {isLogoutModalOpen && (
+      {/*isLogoutModalOpen && (
         <LogoutConfirmationModal
           isOpen={isLogoutModalOpen}
           onConfirm={confirmLogout}
           onCancel={closeLogoutModal}
         />
-      )}
+      )*/}
       <div className="settings-page">
         <div className="top-panel">
           <div className="top-panel-title">
@@ -175,7 +175,7 @@ const Settings = () => {
             <span className="setting-title">Feedback</span>
             <div className="arrow-icon">➔</div>
           </div>
-          <div className="setting-item" onClick={openLogoutModal}>
+          {/*<div className="setting-item" onClick={openLogoutModal}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               alt="Logout"
@@ -197,7 +197,7 @@ const Settings = () => {
             </svg>
             <span className="setting-title">Logout</span>
             <div className="arrow-icon">➔</div>
-          </div>
+          </div>*/}
         </div>
       </div>
     </>

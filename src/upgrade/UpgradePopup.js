@@ -8,13 +8,37 @@ const UpgradePopup = ({ onClose, openModal }) => {
   const dataCtx = useContext(DataContext);
   const setUserProfile = dataCtx.setUserProfile;
 
-  function handleUpgrade() {
-    setUserProfile((prevState) => {
-      return {
-        ...prevState,
-        subscription: true,
-      };
-    });
+  async function handleUpgrade() {
+    await fetch(
+      `${process.env.REACT_APP_backendUrl}/api/users/${dataCtx.user.uid}/subscribe`,
+      {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${dataCtx.user.accessToken}`,
+        },
+      }
+    )
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setUserProfile((prevState) => {
+          return {
+            ...prevState,
+            subscription: true,
+          };
+        });
+      })
+      .catch((error) => {
+        console.error(
+          "There has been a problem with your fetch operation:",
+          error
+        );
+      });
     openModal();
     onClose();
   }

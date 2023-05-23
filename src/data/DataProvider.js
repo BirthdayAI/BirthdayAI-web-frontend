@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "../firebase/firebaseConfig";
 import DataContext from "./data-context";
 
 function DataProvider(props) {
   const [user, setUser] = useState(null);
-  const [userProfile, setUserProfile] = useState({
+  const [userProfile, setUserProfile] = useState(null);
+  const [isAuthChecked, setIsAuthChecked] = useState(false);
+  /*const [userProfile, setUserProfile] = useState({
     subscription: false,
     reminders: [
       {
@@ -65,12 +67,39 @@ function DataProvider(props) {
         style: "romantic",
       },
     ],
-  });
+  });*/
   const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+    const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
+      if (currentUser) {
+        if (location.pathname === "/") {
+          navigate("/home");
+        }
+        await fetch(`${process.env.REACT_APP_backendUrl}/api/users/`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${currentUser.accessToken}`,
+          },
+          body: JSON.stringify({
+            id: currentUser.uid,
+            phoneNumber: currentUser.phoneNumber,
+          }),
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            let userProfile = { ...data.user };
+            userProfile.reminders = Object.values(userProfile.reminders);
+            setUserProfile(userProfile);
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+          });
+      }
       setUser(currentUser);
+      setIsAuthChecked(true);
     });
 
     // Cleanup subscription on unmount
@@ -99,6 +128,7 @@ function DataProvider(props) {
     setUserProfile: setUserProfile,
     handleLogout: handleLogout,
     addReminder: addReminder,
+    isAuthChecked: isAuthChecked,
   };
 
   return (

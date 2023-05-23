@@ -7,6 +7,7 @@ const DataContext = createContext({
   setUserProfile: () => {},
   handleLogout: () => {},
   addReminder: () => {},
+    isAuthChecked: null,
 });
 
 export default DataContext;

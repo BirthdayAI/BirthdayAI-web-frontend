@@ -17,12 +17,12 @@ const Modal = ({
         <div className="modal-form-modal">
           {navigateHome ? (
             <Link to="/home">
-              <button className="close-button" onClick={onClose()}>
+              <button className="close-button" onClick={onClose}>
                 X
               </button>
             </Link>
           ) : (
-            <button className="close-button" onClick={onClose()}>
+            <button className="close-button" onClick={onClose}>
               X
             </button>
           )}

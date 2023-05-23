@@ -1,5 +1,6 @@
 import { useState, useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { v4 as uuidv4 } from "uuid";
 
 import UpgradePopup from "../upgrade/UpgradePopup";
 import Modal from "../modal/Modal";
@@ -109,7 +110,7 @@ function AddReminder() {
     return true;
   }
 
-  function handleAddReminder() {
+  async function handleAddReminder() {
     if (checkFormValidity()) {
       if (!userProfile.subscription && userProfile.reminders.length >= 5) {
         openModal(
@@ -120,9 +121,9 @@ function AddReminder() {
         );
       } else {
         const newReminder = {
-          id: userProfile.reminders.length + 1,
+          id: uuidv4(),
           name: name,
-          relationship: relationship,
+          relationship: relationship.toLowerCase(),
           date: date,
           type: type.toLowerCase(),
           description: description,
@@ -130,13 +131,40 @@ function AddReminder() {
           gift: gift,
           style: style.toLowerCase(),
         };
-        dataCtx.addReminder(newReminder);
-        openModal(
-          "Reminder Added",
-          "Your reminder has been added.",
-          false,
-          true
-        );
+        const requestOptions = {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${dataCtx.user.accessToken}`, // Assuming you have user token in your context
+          },
+          body: JSON.stringify(newReminder),
+        };
+
+        await fetch(
+          `${process.env.REACT_APP_backendUrl}/api/users/${dataCtx.user.uid}/reminders`,
+          requestOptions
+        )
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Network response was not ok");
+            }
+            return response.json();
+          })
+          .then((data) => {
+            dataCtx.addReminder(newReminder);
+            openModal(
+              "Reminder Added",
+              "Your reminder has been added.",
+              false,
+              true
+            );
+          })
+          .catch((error) => {
+            console.error(
+              "There has been a problem with your fetch operation:",
+              error
+            );
+          });
       }
     }
   }

@@ -30,7 +30,7 @@ const LoginPage = () => {
         //loginHint: '+1234567890',
         // You can also use 'whitelistedCountries' key to specify only the countries you want to
         // provide them as an array of country codes. The default is all countries.
-        whitelistedCountries: ["US", "+44"],
+        whitelistedCountries: ["US", "CA"],
       },
     ],
   };
