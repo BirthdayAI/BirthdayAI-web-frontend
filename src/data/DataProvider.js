@@ -8,6 +8,7 @@ function DataProvider(props) {
   const [user, setUser] = useState(null);
   const [userProfile, setUserProfile] = useState(null);
   const [isAuthChecked, setIsAuthChecked] = useState(false);
+  let [sessionId, setSessionId] = useState("");
   /*const [userProfile, setUserProfile] = useState({
     subscription: false,
     reminders: [
@@ -129,6 +130,8 @@ function DataProvider(props) {
     handleLogout: handleLogout,
     addReminder: addReminder,
     isAuthChecked: isAuthChecked,
+    sessionId: sessionId,
+    setSessionId: setSessionId,
   };
 
   return (

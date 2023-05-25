@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import UpgradePopup from "../upgrade/UpgradePopup";
@@ -37,9 +37,27 @@ function calculateDiffDays(birthday) {
 }
 
 function Home() {
+  let [success, setSuccess] = useState(false);
+  let [failure, setFailure] = useState(false);
   const dataCtx = useContext(DataContext);
   const user = dataCtx.user;
   const userProfile = dataCtx.userProfile;
+  const sessionId = dataCtx.sessionId;
+  const setSessionId = dataCtx.setSessionId;
+
+  useEffect(() => {
+    // Check to see if this is a redirect back from Checkout
+    const query = new URLSearchParams(window.location.search);
+
+    if (query.get("success")) {
+      setSuccess(true);
+      setSessionId(query.get("session_id"));
+    }
+
+    if (query.get("canceled")) {
+      setFailure(true);
+    }
+  }, [sessionId]);
 
   // Add the showUpgradePopup state variable
   const [showUpgradePopup, setShowUpgradePopup] = useState(false);
@@ -66,6 +84,20 @@ function Home() {
 
   return (
     <>
+      {success && (
+        <Modal
+          onClose={() => setSuccess(false)}
+          title="Congratulations!"
+          content="You have successfully upgraded your account!"
+        />
+      )}
+      {failure && (
+        <Modal
+          onClose={() => setFailure(false)}
+          title="Oops!"
+          content="Something went wrong with your payment. Please try again."
+        />
+      )}
       {isSuccessModalOpen && (
         <Modal
           onClose={closeSuccessModal}
