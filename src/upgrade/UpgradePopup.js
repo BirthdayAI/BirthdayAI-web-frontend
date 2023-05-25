@@ -9,6 +9,7 @@ const UpgradePopup = ({ onClose, openModal }) => {
   const setUserProfile = dataCtx.setUserProfile;
 
   const createCheckoutSession = async () => {
+    console.log("createCheckoutSession");
     await fetch(`${process.env.REACT_APP_backendUrl}/create-checkout-session`, {
       method: "POST",
       headers: {
