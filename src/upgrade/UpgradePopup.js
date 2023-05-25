@@ -21,7 +21,7 @@ const UpgradePopup = ({ onClose, openModal }) => {
           },
           body: JSON.stringify({
             uid: dataCtx.user.uid,
-            priceId: "price_1NBTmKD9gZ8RqPqTz8YSmd1B",
+            priceId: process.env.REACT_APP_productId,
           }),
         }
       );
