@@ -17,14 +17,13 @@ const UpgradePopup = ({ onClose, openModal }) => {
       },
       body: JSON.stringify({
         uid: dataCtx.user.uid,
-        lookup_key: "BirthdayAI-Premium-Subscription",
+        priceId: "price_1NBN1zD9gZ8RqPqT8myV4r7r",
       }),
     });
   };
 
   // Event handler for the button click
-  const handleButtonClick = (event) => {
-    event.preventDefault(); // prevent the default form submission
+  const handleButtonClick = () => {
     createCheckoutSession();
   };
 
@@ -153,7 +152,6 @@ const UpgradePopup = ({ onClose, openModal }) => {
         <button
           className="continue-button"
           id="checkout-and-portal-button"
-          type="submit"
           onClick={handleButtonClick}
         >
           Continue
