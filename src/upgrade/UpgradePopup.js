@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 
 import DataContext from "../data/data-context";
 import Modal from "../modal/Modal";
+import getStripe from "../stripe/Stripe";
 import "./UpgradePopup.css";
 
 const UpgradePopup = ({ onClose, openModal }) => {
@@ -9,18 +10,47 @@ const UpgradePopup = ({ onClose, openModal }) => {
   const setUserProfile = dataCtx.setUserProfile;
 
   const createCheckoutSession = async () => {
-    console.log("createCheckoutSession");
-    await fetch(`${process.env.REACT_APP_backendUrl}/create-checkout-session`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${dataCtx.user.accessToken}`, // set the access token in the Authorization header
-      },
-      body: JSON.stringify({
-        uid: dataCtx.user.uid,
-        priceId: "price_1NBN1zD9gZ8RqPqT8myV4r7r",
-      }),
-    });
+    try {
+      const response = await fetch(
+        `${process.env.REACT_APP_backendUrl}/create-checkout-session`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${dataCtx.user.accessToken}`,
+          },
+          body: JSON.stringify({
+            uid: dataCtx.user.uid,
+            priceId: "price_1NBN1zD9gZ8RqPqT8myV4r7r",
+          }),
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+
+      const session = await response.json();
+
+      const stripe = await getStripe(); // assuming you have a function to get Stripe instance
+
+      if (stripe !== null) {
+        const { error } = await stripe.redirectToCheckout({
+          sessionId: session.sessionId,
+        });
+        if (error) {
+          // Handle error here
+          console.error(error);
+        }
+      } else {
+        console.log("Stripe not loaded");
+      }
+    } catch (error) {
+      console.error(
+        "There has been a problem with your fetch operation: ",
+        error
+      );
+    }
   };
 
   // Event handler for the button click
