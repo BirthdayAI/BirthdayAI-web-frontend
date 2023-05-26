@@ -60,45 +60,23 @@ const Settings = () => {
   const closeFeedbackSuccessModal = () => setIsFeedbackSuccessModalOpen(false);
 
   const createPortalSession = async () => {
-    try {
-      const response = await fetch(
-        `${process.env.REACT_APP_backendUrl}/create-portal-session`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${dataCtx.user.accessToken}`,
-          },
-          body: JSON.stringify({
-            uid: dataCtx.user.uid,
-          }),
-        }
-      );
-
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
+    const response = await fetch(
+      `${process.env.REACT_APP_backendUrl}/create-portal-session`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${dataCtx.user.accessToken}`, // set the access token in the Authorization header
+        },
+        body: JSON.stringify({ uid: dataCtx.user.uid }),
       }
-
-      const session = await response.json();
-
-      const stripe = await getStripe(); // assuming you have a function to get Stripe instance
-
-      if (stripe !== null) {
-        const { error } = await stripe.redirectToBillingPortal({
-          sessionId: session.sessionId,
-        });
-        if (error) {
-          // Handle error here
-          console.error(error);
-        }
-      } else {
-        console.log("Stripe not loaded");
-      }
-    } catch (error) {
-      console.error(
-        "There has been a problem with your fetch operation: ",
-        error
-      );
+    );
+    const responseData = await response.json();
+    if (responseData.url) {
+      window.location.href = responseData.url;
+    } else {
+      // handle error
+      console.log("Failed to create portal session.");
     }
   };
 
