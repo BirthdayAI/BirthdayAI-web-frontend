@@ -122,6 +122,30 @@ function DataProvider(props) {
     });
   }
 
+  function deleteReminder(id) {
+    const newReminders = userProfile.reminders.filter(
+      (reminder) => reminder.id !== id
+    );
+    setUserProfile((prevState) => {
+      return {
+        ...prevState,
+        reminders: newReminders,
+      };
+    });
+  }
+
+  function editReminder(reminder) {
+    const newReminders = userProfile.reminders.map((r) =>
+      r.id === reminder.id ? reminder : r
+    );
+    setUserProfile((prevState) => {
+      return {
+        ...prevState,
+        reminders: newReminders,
+      };
+    });
+  }
+
   const dataContext = {
     user: user,
     setUser: setUser,
@@ -132,6 +156,8 @@ function DataProvider(props) {
     isAuthChecked: isAuthChecked,
     sessionId: sessionId,
     setSessionId: setSessionId,
+    deleteReminder: deleteReminder,
+    editReminder: editReminder,
   };
 
   return (

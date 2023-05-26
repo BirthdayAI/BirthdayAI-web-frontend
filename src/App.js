@@ -5,6 +5,7 @@ import { Route, Navigate, Routes } from "react-router-dom";
 import LoginPage from "./login/LoginPage";
 import Home from "./home/Home";
 import AddReminder from "./add/AddReminder";
+import EditReminder from "./edit/EditReminder";
 import Settings from "./settings/Settings";
 import DataContext from "./data/data-context";
 import "./App.css";
@@ -45,6 +46,17 @@ function App() {
               isAuthChecked && (
                 <div className="column">
                   <Settings />
+                </div>
+              )
+            }
+            exact
+          />
+          <Route
+            path="/edit/:id"
+            element={
+              isAuthChecked && (
+                <div className="column">
+                  <EditReminder />
                 </div>
               )
             }

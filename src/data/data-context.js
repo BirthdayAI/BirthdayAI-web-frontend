@@ -10,6 +10,8 @@ const DataContext = createContext({
   isAuthChecked: null,
   sessionId: null,
   setSessionId: () => {},
+  deleteReminder: () => {},
+  editReminder: () => {},
 });
 
 export default DataContext;
