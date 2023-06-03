@@ -39,9 +39,58 @@ function AddReminder() {
     ? ["Birthday", "Anniversary", "Holiday", "Other"]
     : ["Birthday"];
 
-  const relationships = ["Friend", "Family", "Colleague", "Other"];
+  const relationships = [
+    "Friend",
+    "Family",
+    "Father",
+    "Mother",
+    "Uncle",
+    "Aunt",
+    "Cousin",
+    "Grandfather",
+    "Grandmother",
+    "Brother",
+    "Sister",
+    "Son",
+    "Daughter",
+    "Nephew",
+    "Niece",
+    "Boyfriend",
+    "Girlfriend",
+    "Husband",
+    "Wife",
+    "Partner",
+    "Co-worker",
+    "Boss",
+    "Teacher",
+    "Student",
+    "Neighbor",
+  ];
 
-  const styles = ["Simple", "Style2", "Style3"]; // Add or modify as needed
+  const styles = [
+    "Simple",
+    "Funny",
+    "Romantic",
+    "Sentimental",
+    "Cheerful",
+    "Warm",
+    "Formal",
+    "Casual",
+    "Witty",
+    "Inspirational",
+    "Sincere",
+    "Heartfelt",
+    "Enthusiastic",
+    "Youthful",
+    "Nostalgic",
+    "Playful",
+    "Energetic",
+    "Classy",
+    "Sophisticated",
+    "Motivational",
+    "Creative",
+    "Joyful",
+  ];
 
   let nameText = "Name";
   if (type === "Holiday") {

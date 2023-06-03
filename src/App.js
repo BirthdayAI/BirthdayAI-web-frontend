@@ -13,58 +13,59 @@ import "./App.css";
 function App() {
   const dataCtx = useContext(DataContext);
   const isAuthChecked = dataCtx.isAuthChecked;
+
+  if (!isAuthChecked) {
+    return <div></div>;
+  }
+
   return (
     <Routes>
-      <Route path="/" element={isAuthChecked && <LoginPage />} exact />
-      <Route
-        path="/home"
-        element={
-          isAuthChecked && (
-            <div className="column">
-              <Home />
-            </div>
-          )
-        }
-        exact
-      />
-      {dataCtx.user && (
+      {dataCtx.user ? (
         <>
+          <Route
+            path="/home"
+            element={
+              <div className="column">
+                <Home />
+              </div>
+            }
+            exact
+          />
           <Route
             path="/add"
             element={
-              isAuthChecked && (
-                <div className="column">
-                  <AddReminder />
-                </div>
-              )
+              <div className="column">
+                <AddReminder />
+              </div>
             }
             exact
           />
           <Route
             path="/settings"
             element={
-              isAuthChecked && (
-                <div className="column">
-                  <Settings />
-                </div>
-              )
+              <div className="column">
+                <Settings />
+              </div>
             }
             exact
           />
           <Route
             path="/edit/:id"
             element={
-              isAuthChecked && (
-                <div className="column">
-                  <EditReminder />
-                </div>
-              )
+              <div className="column">
+                <EditReminder />
+              </div>
             }
             exact
           />
+          <Route path="*" element={<Navigate to="/home" />} />
+        </>
+      ) : (
+        <>
+          <Route path="/" element={<LoginPage />} exact />
+          <Route path="*" element={<Navigate to="/" />} />
         </>
       )}
-      <Route path="*" element={<Navigate to="/" />} />
     </Routes>
   );
 }

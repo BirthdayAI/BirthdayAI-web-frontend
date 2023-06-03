@@ -4,10 +4,21 @@ import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "../firebase/firebaseConfig";
 import DataContext from "./data-context";
 
+function useDidMount() {
+  const [didMount, setDidMount] = useState(false);
+
+  useEffect(() => {
+    setDidMount(true);
+  }, []);
+
+  return didMount;
+}
+
 function DataProvider(props) {
   const [user, setUser] = useState(null);
   const [userProfile, setUserProfile] = useState(null);
   const [isAuthChecked, setIsAuthChecked] = useState(false);
+  const [loading, setLoading] = useState(true);
   let [sessionId, setSessionId] = useState("");
   /*const [userProfile, setUserProfile] = useState({
     subscription: false,
@@ -71,13 +82,12 @@ function DataProvider(props) {
   });*/
   const navigate = useNavigate();
   const location = useLocation();
+  const didMount = useDidMount();
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
+      setLoading(false);
       if (currentUser) {
-        if (location.pathname === "/") {
-          navigate("/home");
-        }
         await fetch(`${process.env.REACT_APP_backendUrl}/api/users/`, {
           method: "POST",
           headers: {
@@ -92,20 +102,35 @@ function DataProvider(props) {
           .then((response) => response.json())
           .then((data) => {
             let userProfile = { ...data.user };
+            if (userProfile.reminders === undefined) {
+              userProfile.reminders = [];
+            }
             userProfile.reminders = Object.values(userProfile.reminders);
             setUserProfile(userProfile);
+            setUser(currentUser);
+            setIsAuthChecked(true);
           })
           .catch((error) => {
             console.error("Error:", error);
           });
+        if (location.pathname === "/") {
+          navigate("/home", true);
+        }
+      } else {
+        setIsAuthChecked(true);
+        setUser(null);
+        setUserProfile(null);
+        navigate("/", true);
       }
-      setUser(currentUser);
-      setIsAuthChecked(true);
     });
 
     // Cleanup subscription on unmount
     return () => unsubscribe();
   }, []);
+
+  if (loading) {
+    return <div></div>;
+  }
 
   const handleLogout = async () => {
     await signOut(auth);
