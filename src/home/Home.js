@@ -30,7 +30,7 @@ function calculateDiffDays(birthday) {
     }
 
     const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
-    diffDays = Math.round(Math.abs((now - nextBirthday) / oneDay)) + 1;
+    diffDays = Math.floor(Math.abs((now - nextBirthday) / oneDay)) + 1;
   }
 
   return diffDays;

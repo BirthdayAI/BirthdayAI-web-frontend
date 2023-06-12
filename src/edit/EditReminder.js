@@ -88,6 +88,10 @@ function EditReminder() {
     "Teacher",
     "Student",
     "Neighbor",
+    "Brother-in-law",
+    "Sister-in-law",
+    "Father-in-law",
+    "Mother-in-law",
   ];
 
   const styles = [
