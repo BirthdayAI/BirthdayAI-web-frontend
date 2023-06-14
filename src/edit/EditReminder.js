@@ -147,6 +147,10 @@ function EditReminder() {
       openModal("Form Error", "Please enter a name.");
       return false;
     }
+    if (name.length > 50) {
+      openModal("Form Error", "Name must be less than 50 characters.");
+      return false;
+    }
     if (date === "") {
       openModal("Form Error", "Please enter a date.");
       return false;
@@ -166,6 +170,13 @@ function EditReminder() {
     if (gift) {
       if (description === "") {
         openModal("Form Error", "Please enter a description.");
+        return false;
+      }
+      if (description > 150) {
+        openModal(
+          "Form Error",
+          "Description must be less than 150 characters."
+        );
         return false;
       }
     }
