@@ -1,6 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getAnalytics } from "firebase/analytics";
+import { getStorage } from "firebase/storage";
 import "firebase/compat/auth";
 import compatApp from "firebase/compat/app";
 
@@ -23,5 +24,6 @@ const auth = getAuth(app);
 
 compatApp.initializeApp(firebaseConfig);
 export const authForFirebaseUI = compatApp.auth();
+const storage = getStorage(app);
 
-export { app, auth };
+export { app, auth, storage };

@@ -12,6 +12,9 @@ const DataContext = createContext({
   setSessionId: () => {},
   deleteReminder: () => {},
   editReminder: () => {},
+  addCard: () => {},
+  editCard: () => {},
+  deleteCard: () => {},
 });
 
 export default DataContext;

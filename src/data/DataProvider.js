@@ -105,7 +105,11 @@ function DataProvider(props) {
             if (userProfile.reminders === undefined) {
               userProfile.reminders = [];
             }
+            if (userProfile.cards === undefined) {
+              userProfile.cards = [];
+            }
             userProfile.reminders = Object.values(userProfile.reminders);
+            userProfile.cards = Object.values(userProfile.cards);
             setUserProfile(userProfile);
             setUser(currentUser);
             setIsAuthChecked(true);
@@ -138,7 +142,8 @@ function DataProvider(props) {
   };
 
   function addReminder(reminder) {
-    const newReminders = [...userProfile.reminders, reminder];
+    const reminders = userProfile.reminders || [];
+    const newReminders = [reminders, reminder];
     setUserProfile((prevState) => {
       return {
         ...prevState,
@@ -171,6 +176,39 @@ function DataProvider(props) {
     });
   }
 
+  function addCard(card) {
+    const cards = userProfile.cards || [];
+    const newCards = [...cards, card];
+    setUserProfile((prevState) => {
+      return {
+        ...prevState,
+        cards: newCards,
+      };
+    });
+  }
+
+  function editCard(card) {
+    const newCards = userProfile.cards.map((c) =>
+      c.id === card.id ? card : c
+    );
+    setUserProfile((prevState) => {
+      return {
+        ...prevState,
+        cards: newCards,
+      };
+    });
+  }
+
+  function deleteCard(id) {
+    const newCards = userProfile.cards.filter((card) => card.id !== id);
+    setUserProfile((prevState) => {
+      return {
+        ...prevState,
+        cards: newCards,
+      };
+    });
+  }
+
   const dataContext = {
     user: user,
     setUser: setUser,
@@ -183,6 +221,9 @@ function DataProvider(props) {
     setSessionId: setSessionId,
     deleteReminder: deleteReminder,
     editReminder: editReminder,
+    addCard: addCard,
+    editCard: editCard,
+    deleteCard: deleteCard,
   };
 
   return (

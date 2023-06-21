@@ -1,0 +1,206 @@
+.top-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 20px;
+  background-color: #3f51b5;
+  color: #fff;
+}
+
+.addReminder-body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  padding: 20px;
+  background-color: #fafafa;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.addReminder-h1 {
+  flex-grow: 1;
+  text-align: center;
+  font-size: 1.5em;
+  color: #fafafa;
+}
+
+.left-icon,
+.right-icons {
+  display: flex;
+  align-items: center;
+}
+
+.left-icon i,
+.right-icons i {
+  margin-right: 10px;
+  color: #fff;
+}
+
+.text-buttons {
+  text-decoration: none;
+  color: #3f51b5;
+  background-color: #fafafa;
+  padding: 3px 7px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.text-buttons:hover {
+  background-color: #f0f0f0;
+}
+
+input[type="text"],
+input[type="date"],
+select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  background-color: #fafafa;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+select:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(63, 81, 181, 0.5); /* Same color as .addReminder-h1 but with transparency */
+}
+
+#sendButton {
+  background-color: #3f51b5;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#sendButton:hover {
+  background-color: #303f9f;
+}
+
+.image-preview {
+  width: 50%;
+  padding: 10px;
+  margin: 20px 0;
+  border-radius: 4px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fafafa;
+}
+
+.image-preview img {
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 0 8px rgba(63, 81, 181, 0.5);
+  border-radius: 4px;
+}
+
+.upgrade-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.upgrade-popup {
+  width: 90%;
+  max-width: 500px;
+  background-color: white;
+  border-radius: 4px;
+  padding: 20px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.upgrade-popup-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  margin-top: 20px;
+  max-height: 300px; /* Adjust this value as per your needs */
+}
+
+.card {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  position: relative;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+#viewPastButton {
+  margin-top: 10px;
+  background-color: #3f51b5;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+#viewPastButton:hover {
+  background-color: #303f9f;
+}
+
+.top-buttons {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+}
+
+.delete-button {
+  background: #ffffff;
+  border: none;
+  padding: 2px;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  margin-right: 1px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}

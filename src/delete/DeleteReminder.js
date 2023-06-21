@@ -12,7 +12,7 @@ const DeleteReminder = ({ isOpen, onConfirm, onCancel }) => {
         <span onClick={onCancel} className="close">
           &times;
         </span>
-        <h2>Are you sure you want to Delete Reminder?</h2>
+        <h2>Are you sure you want to Delete?</h2>
         <div className="modal-button-group">
           <button onClick={onConfirm} className="confirm-button">
             Yes
