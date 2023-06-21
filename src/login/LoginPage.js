@@ -40,7 +40,7 @@ const LoginPage = () => {
       <div className="login-container">
         <img
           className="login-logo"
-          src={`${process.env.PUBLIC_URL}/../../images/Login/Red_Cup_Logo.png`}
+          src={`${process.env.PUBLIC_URL}/../../BirthdayAIBanner.jpg`}
           alt="Logo"
         ></img>
         <h2 className="welcome-text">Welcome!</h2>

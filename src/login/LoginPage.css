@@ -62,10 +62,9 @@
 }
 
 .login-logo {
-  width: 80px;
+  width: 250px;
   height: auto;
   padding-top: 30px;
-  padding-bottom: 10px;
 }
 
 @media (max-width: 768px) {
@@ -75,7 +74,7 @@
   }
   .login-logo {
     padding-top: 0px;
-    width: 60px;
+    width: 200px;
     height: auto;
   }
 }
