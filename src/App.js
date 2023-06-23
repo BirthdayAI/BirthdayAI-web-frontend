@@ -22,15 +22,7 @@ function App() {
 
   return (
     <Routes>
-      <Route
-        path="/privacy"
-        element={
-          <div className="column">
-            <PrivacyPolicy />
-          </div>
-        }
-        exact
-      />
+      <Route path="/privacy" element={<PrivacyPolicy />} exact />
       {dataCtx.user ? (
         <>
           <Route
