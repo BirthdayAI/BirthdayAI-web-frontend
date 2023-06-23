@@ -2,16 +2,6 @@ import React from "react";
 
 const PrivacyPolicy = () => (
   <div>
-    <h1>Privacy Policy for BirthdayAI</h1>
-    <p>Last updated: 06/14/2023</p>
-
-    <p>
-      At BirthdayAI, we respect your privacy and are committed to protecting it
-      through this Privacy Policy. This policy applies to the BirthdayAI mobile
-      application (the "App"), and it governs data collection, processing and
-      usage in compliance with the General Data Protection Regulation (GDPR).
-    </p>
-
     <h1>Privacy Policy of BirthdayAI</h1>
 
     <p>
@@ -23,6 +13,13 @@ const PrivacyPolicy = () => (
       This page is used to inform website visitors regarding our policies with
       the collection, use, and disclosure of Personal Information if anyone
       decided to use our Service, the BirthdayAI website.
+    </p>
+
+    <p>
+      At BirthdayAI, we respect your privacy and are committed to protecting it
+      through this Privacy Policy. This policy applies to the BirthdayAI mobile
+      application (the "App"), and it governs data collection, processing and
+      usage in compliance with the General Data Protection Regulation (GDPR).
     </p>
 
     <p>
