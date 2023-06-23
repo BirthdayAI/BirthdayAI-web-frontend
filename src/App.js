@@ -83,7 +83,6 @@ function App() {
       ) : (
         <>
           <Route path="/" element={<LoginPage />} exact />
-          <Route path="*" element={<Navigate to="/" />} />
           <Route
             path="/privacy"
             element={
@@ -93,6 +92,7 @@ function App() {
             }
             exact
           />
+          <Route path="*" element={<Navigate to="/" />} />
         </>
       )}
     </Routes>
