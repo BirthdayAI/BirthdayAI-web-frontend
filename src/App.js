@@ -22,6 +22,15 @@ function App() {
 
   return (
     <Routes>
+      <Route
+        path="/privacy"
+        element={
+          <div className="column">
+            <PrivacyPolicy />
+          </div>
+        }
+        exact
+      />
       {dataCtx.user ? (
         <>
           <Route
@@ -69,29 +78,11 @@ function App() {
             }
             exact
           />
-          <Route
-            path="/privacy"
-            element={
-              <div className="column">
-                <PrivacyPolicy />
-              </div>
-            }
-            exact
-          />
           <Route path="*" element={<Navigate to="/home" />} />
         </>
       ) : (
         <>
           <Route path="/" element={<LoginPage />} exact />
-          <Route
-            path="/privacy"
-            element={
-              <div className="column">
-                <PrivacyPolicy />
-              </div>
-            }
-            exact
-          />
           <Route path="*" element={<Navigate to="/" />} />
         </>
       )}
