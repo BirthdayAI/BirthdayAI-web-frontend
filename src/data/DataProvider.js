@@ -124,7 +124,10 @@ function DataProvider(props) {
         setIsAuthChecked(true);
         setUser(null);
         setUserProfile(null);
-        if (location.pathname !== "/privacy") {
+        if (
+          location.pathname !== "/privacy" &&
+          location.pathname !== "/contact"
+        ) {
           navigate("/", true);
         }
       }
