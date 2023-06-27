@@ -9,6 +9,7 @@ import EditReminder from "./edit/EditReminder";
 import Settings from "./settings/Settings";
 import PrivacyPolicy from "./privacy/PrivacyPolicy";
 import ImageGeneration from "./image/ImageGeneration";
+import Contact from "./privacy/Contact";
 import DataContext from "./data/data-context";
 import "./App.css";
 
@@ -23,6 +24,7 @@ function App() {
   return (
     <Routes>
       <Route path="/privacy" element={<PrivacyPolicy />} exact />
+      <Route path="/contact" element={<Contact />} exact />
       {dataCtx.user ? (
         <>
           <Route
