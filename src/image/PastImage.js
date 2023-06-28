@@ -54,7 +54,7 @@ function PastImage(props) {
 
       <div key={props.card.id} className="card">
         <div className="top-buttons">
-          <button className="delete-button" onClick={openDelete}>
+          <button className="delete-button-generation" onClick={openDelete}>
             <svg
               viewBox="0 0 24 24"
               fill="#3f51b5"

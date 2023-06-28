@@ -188,7 +188,7 @@ select:focus {
   justify-content: space-between;
 }
 
-.delete-button {
+.delete-button-generation {
   background: #ffffff;
   border: none;
   padding: 2px;

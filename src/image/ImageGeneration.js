@@ -101,6 +101,12 @@ function ImageGeneration() {
           true,
           false
         );
+      } else if (userProfile?.monthlyCardCount >= 15) {
+        closeLoadingModal();
+        openModal(
+          "Monthly Limit Reached",
+          "You have reached your monthly limit of 15 cards. Your limit will reset on the first of the month."
+        );
       } else {
         const newCard = {
           id: uuidv4(),
