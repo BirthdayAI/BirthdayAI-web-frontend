@@ -2,6 +2,7 @@ import { useContext } from "react";
 
 import { Route, Navigate, Routes } from "react-router-dom";
 
+import LandingPage from "./landing/LandingPage";
 import LoginPage from "./login/LoginPage";
 import Home from "./home/Home";
 import AddReminder from "./add/AddReminder";
@@ -76,7 +77,8 @@ function App() {
         </>
       ) : (
         <>
-          <Route path="/" element={<LoginPage />} exact />
+          <Route path="/" element={<LandingPage />} exact />
+          <Route path="/login" element={<LoginPage />} exact />
           <Route path="*" element={<Navigate to="/" />} />
         </>
       )}

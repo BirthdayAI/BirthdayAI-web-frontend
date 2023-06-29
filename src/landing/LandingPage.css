@@ -1,0 +1,701 @@
+html {
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+}
+.e14_26463 {
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  height: 250%;
+  position: absolute;
+  margin-left: 10vw;
+}
+.e14_26469 {
+  background-color: rgba(
+    217.0000022649765,
+    217.0000022649765,
+    217.0000022649765,
+    1
+  );
+  opacity: 0.20000000298023224;
+  width: 1173px;
+  height: 136px;
+  position: absolute;
+  left: 0px;
+  top: 1694px;
+}
+.e14_26470 {
+  width: 414px;
+  height: 222px;
+  position: absolute;
+  left: 165px;
+  top: 143px;
+}
+.e14_26471 {
+  color: rgba(0, 0, 0, 1);
+  width: 400px;
+  height: 144px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  font-family: Inter;
+  text-align: left;
+  font-size: 40px;
+  letter-spacing: 0;
+}
+.e14_26473 {
+  color: rgba(97.74999797344208, 97.74999797344208, 97.74999797344208, 1);
+  width: 414px;
+  height: 58px;
+  position: absolute;
+  left: 0px;
+  top: 164px;
+  font-family: Inter;
+  text-align: left;
+  font-size: 20px;
+  letter-spacing: 0;
+}
+.e14_26474 {
+  width: 871px;
+  height: 73px;
+  position: absolute;
+  left: 138px;
+  top: 45px;
+}
+.e14_26475 {
+  width: 216px;
+  height: 61px;
+  position: absolute;
+  left: 0px;
+  top: 6px;
+}
+.e2302_7000 {
+  width: 200px;
+  height: 90px;
+  position: absolute;
+  left: 0px;
+  top: -20px;
+  background-image: url("../../public/BirthdayAIBanner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.e14_26485 {
+  width: 132px;
+  height: 17px;
+  position: absolute;
+  left: 739px;
+  top: 28px;
+  z-index: 1;
+}
+.e14_26486 {
+  color: rgba(0, 0, 0, 1);
+  width: 61px;
+  height: 17px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  font-family: Inter;
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 0;
+}
+.e14_26489 {
+  color: rgba(0, 0, 0, 0.5);
+  width: 46px;
+  height: 17px;
+  position: absolute;
+  left: 86px;
+  top: 0px;
+  font-family: Inter;
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 0;
+}
+.e14_26492 {
+  width: 938px;
+  height: 66px;
+  position: absolute;
+  left: 160px;
+  top: 1729px;
+}
+.e2302_7071 {
+  width: 249px;
+  height: 62px;
+  position: absolute;
+  left: 0px;
+  top: 2px;
+}
+.e2302_7072 {
+  width: 78px;
+  height: 83px;
+  position: absolute;
+  left: 0px;
+  top: -10.5px;
+  background-image: url("../../public/BirthdayAITransparent.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.e14_26503 {
+  width: 357px;
+  height: 17px;
+  position: absolute;
+  left: 581px;
+  top: 24.5px;
+}
+.e14_26504 {
+  color: rgba(0, 0, 0, 1);
+  width: 40px;
+  height: 17px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  font-family: Inter;
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 0;
+}
+.e14_26505 {
+  color: rgba(0, 0, 0, 0.5);
+  width: 80px;
+  height: 17px;
+  position: absolute;
+  left: 65px;
+  top: 0px;
+  font-family: Inter;
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 0;
+}
+.e14_26506 {
+  color: rgba(0, 0, 0, 0.5);
+  width: 116px;
+  height: 17px;
+  position: absolute;
+  left: 170px;
+  top: 0px;
+  font-family: Inter;
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 0;
+}
+.e14_26507 {
+  color: rgba(0, 0, 0, 0.5);
+  width: 46px;
+  height: 17px;
+  position: absolute;
+  left: 311px;
+  top: 0px;
+  font-family: Inter;
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 0;
+}
+.e14_26537 {
+  width: 402px;
+  height: 480px;
+  position: absolute;
+  left: 602px;
+  top: 631px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.e14_26538 {
+  width: 484.3384704589844px;
+  height: 584.999267578125px;
+  position: absolute;
+  left: -54.99609375px;
+  top: -104.99930572509766px;
+}
+.e14_26539 {
+  background-color: rgba(
+    244.3749949336052,
+    244.3749949336052,
+    244.3749949336052,
+    1
+  );
+  width: 402px;
+  height: 480px;
+  position: absolute;
+  left: 54.99609375px;
+  top: 104.99930572509766px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.e2302_7107 {
+  width: 373px;
+  height: 364px;
+  position: absolute;
+  left: 14px;
+  top: 58px;
+  background-image: url("../../public/AICard2.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.e2302_7091 {
+  width: 402px;
+  height: 480px;
+  position: absolute;
+  left: 169px;
+  top: 631px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.e2302_7092 {
+  width: 484.3384704589844px;
+  height: 584.999267578125px;
+  position: absolute;
+  left: -54.99609375px;
+  top: -104.99930572509766px;
+}
+.e2302_7093 {
+  background-color: rgba(
+    244.3749949336052,
+    244.3749949336052,
+    244.3749949336052,
+    1
+  );
+  width: 402px;
+  height: 480px;
+  position: absolute;
+  left: 54.99609375px;
+  top: 104.99930572509766px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.e2302_7106 {
+  width: 217px;
+  height: 480px;
+  position: absolute;
+  left: -16px;
+  top: 0px;
+  background-image: url("../../public/16.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.e2302_7109 {
+  width: 182px;
+  height: 186px;
+  position: absolute;
+  left: 215px;
+  top: 27px;
+  background-image: url("../../public/Birthday.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.e2304_7112 {
+  width: 190px;
+  height: 188px;
+  position: absolute;
+  left: 207px;
+  top: 250px;
+  background-image: url("../../public/BirthdayAICard3.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.e2302_7096 {
+  width: 402px;
+  height: 480px;
+  position: absolute;
+  left: 167px;
+  top: 1137px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.e2302_7097 {
+  width: 484.3384704589844px;
+  height: 584.999267578125px;
+  position: absolute;
+  left: -54.99609375px;
+  top: -104.99930572509766px;
+}
+.e2302_7098 {
+  background-color: rgba(
+    244.3749949336052,
+    244.3749949336052,
+    244.3749949336052,
+    1
+  );
+  width: 402px;
+  height: 480px;
+  position: absolute;
+  left: 54.99609375px;
+  top: 104.99930572509766px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.e2305_7113 {
+  width: 375px;
+  height: 369px;
+  position: absolute;
+  left: 15px;
+  top: 55px;
+  background-image: url("../../public/BirthdayAIYellow.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.e2302_7101 {
+  width: 402px;
+  height: 480px;
+  position: absolute;
+  left: 602px;
+  top: 1137px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.e2302_7102 {
+  width: 484.3384704589844px;
+  height: 584.999267578125px;
+  position: absolute;
+  left: -54.99609375px;
+  top: -104.99930572509766px;
+}
+.e2302_7103 {
+  background-color: rgba(
+    244.3749949336052,
+    244.3749949336052,
+    244.3749949336052,
+    1
+  );
+  width: 402px;
+  height: 480px;
+  position: absolute;
+  left: 54.99609375px;
+  top: 104.99930572509766px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.e2304_7111 {
+  width: 365px;
+  height: 373px;
+  position: absolute;
+  left: 18px;
+  top: 53px;
+  background-image: url("../../public/BirthdayAIEaster.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.e2302_7073 {
+  width: 402px;
+  height: 480px;
+  position: absolute;
+  left: 602px;
+  top: 125px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.e2302_7074 {
+  width: 484.3384704589844px;
+  height: 439.307861328125px;
+  position: absolute;
+  left: -54.99609375px;
+  top: -104.99930572509766px;
+}
+.e2302_7078 {
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  left: 214px;
+  top: 208.99945068359375px;
+}
+.e2302_7082 {
+  width: 225px;
+  height: 480px;
+  position: absolute;
+  left: 204px;
+  top: 0px;
+  background-image: url("../../public/12.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.e2302_7001 {
+  width: 308px;
+  height: 98px;
+  position: absolute;
+  background-image: url("../../public/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg");
+  left: 167px;
+  top: 392px;
+}
+.e2302_7002 {
+  width: 308px;
+  height: 98.00031280517578px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.e2302_7003 {
+  width: 308px;
+  height: 98.00031280517578px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.e2302_7004 {
+  width: 308px;
+  height: 98.00031280517578px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.e2302_7007 {
+  width: 256.14208984375px;
+  height: 60.68878173828125px;
+  position: absolute;
+  left: 25.665536880493164px;
+  top: 21.364662170410156px;
+}
+.e2302_7008 {
+  width: 45.600135803222656px;
+  height: 53.35112380981445px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.e2302_7009 {
+  width: 45.600135803222656px;
+  height: 53.35112380981445px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.e2302_7010 {
+  background-color: rgba(255, 255, 255, 1);
+  width: 45.600135803222656px;
+  height: 40.48191833496094px;
+  position: absolute;
+  left: -6.687370728286623e-7px;
+  top: 12.869205474853516px;
+}
+.e2302_7011 {
+  background-color: rgba(255, 255, 255, 1);
+  width: 11.261492729187012px;
+  height: 12.301982879638672px;
+  position: absolute;
+  left: 22.699302673339844px;
+  top: -9.255659847440256e-7px;
+}
+.e2302_7012 {
+  width: 193.1962890625px;
+  height: 38.26939010620117px;
+  position: absolute;
+  left: 62.94584655761719px;
+  top: 22.419384002685547px;
+}
+.e2302_7013 {
+  background-color: rgba(255, 255, 255, 1);
+  width: 28.440771102905273px;
+  height: 30.42409896850586px;
+  position: absolute;
+  left: 0.0000025108699901466025px;
+  top: 0.5072993636131287px;
+}
+.e2302_7014 {
+  background-color: rgba(255, 255, 255, 1);
+  width: 21.950881958007812px;
+  height: 29.755783081054688px;
+  position: absolute;
+  left: 31.411718368530273px;
+  top: 8.513609886169434px;
+}
+.e2302_7015 {
+  background-color: rgba(255, 255, 255, 1);
+  width: 21.95087432861328px;
+  height: 29.755762100219727px;
+  position: absolute;
+  left: 57.059940338134766px;
+  top: 8.513631820678711px;
+}
+.e2302_7016 {
+  background-color: rgba(255, 255, 255, 1);
+  width: 24.52218246459961px;
+  height: 31.438398361206055px;
+  position: absolute;
+  left: 91.06572723388672px;
+  top: 0.000002080013928207336px;
+}
+.e2302_7017 {
+  background-color: rgba(255, 255, 255, 1);
+  width: 12.625526428222656px;
+  height: 27.55980682373047px;
+  position: absolute;
+  left: 117.71693420410156px;
+  top: 3.5004658699035645px;
+}
+.e2302_7018 {
+  background-color: rgba(255, 255, 255, 1);
+  width: 22.106645584106445px;
+  height: 22.729482650756836px;
+  position: absolute;
+  left: 132.90892028808594px;
+  top: 8.477051734924316px;
+}
+.e2302_7019 {
+  background-color: rgba(255, 255, 255, 1);
+  width: 11.916823387145996px;
+  height: 22.41753578186035px;
+  position: absolute;
+  left: 158.95919799804688px;
+  top: 8.513814926147461px;
+}
+.e2302_7020 {
+  background-color: rgba(255, 255, 255, 1);
+  width: 21.287248611450195px;
+  height: 22.729482650756836px;
+  position: absolute;
+  left: 171.9090118408203px;
+  top: 8.477027893066406px;
+}
+.e2302_7021 {
+  width: 177.96791076660156px;
+  height: 15.577885627746582px;
+  position: absolute;
+  left: 91.8123779296875px;
+  top: 20.670650482177734px;
+}
+.e2302_7022 {
+  width: 177.96791076660156px;
+  height: 15.577885627746582px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.e2302_7023 {
+  background-color: rgba(255, 255, 255, 1);
+  width: 12.827780723571777px;
+  height: 14.635345458984375px;
+  position: absolute;
+  left: 0.0000016975641301542055px;
+  top: 0.7037101984024048px;
+}
+.e2302_7024 {
+  background-color: rgba(255, 255, 255, 1);
+  width: 10.983124732971191px;
+  height: 11.458038330078125px;
+  position: absolute;
+  left: 15.442502975463867px;
+  top: 4.093855857849121px;
+}
+.e2302_7025 {
+  background-color: rgba(255, 255, 255, 1);
+  width: 16.061553955078125px;
+  height: 11.032177925109863px;
+  position: absolute;
+  left: 28.051189422607422px;
+  top: 4.306659698486328px;
+}
+.e2302_7026 {
+  background-color: rgba(255, 255, 255, 1);
+  width: 9.883647918701172px;
+  height: 11.255993843078613px;
+  position: absolute;
+  left: 46.79971694946289px;
+  top: 4.082843780517578px;
+}
+.e2302_7027 {
+  background-color: rgba(255, 255, 255, 1);
+  width: 2.287327766418457px;
+  height: 15.338811874389648px;
+  position: absolute;
+  left: 60.287418365478516px;
+  top: 0.0000012729042282444425px;
+}
+.e2302_7028 {
+  background-color: rgba(255, 255, 255, 1);
+  width: 10.984253883361816px;
+  height: 11.458179473876953px;
+  position: absolute;
+  left: 65.72858428955078px;
+  top: 4.093649864196777px;
+}
+.e2302_7029 {
+  background-color: rgba(255, 255, 255, 1);
+  width: 9.727426528930664px;
+  height: 11.444759368896484px;
+  position: absolute;
+  left: 79.09504699707031px;
+  top: 4.093752861022949px;
+}
+.e2302_7030 {
+  background-color: rgba(255, 255, 255, 1);
+  width: 10.823333740234375px;
+  height: 15.523226737976074px;
+  position: absolute;
+  left: 91.82865142822266px;
+  top: 0.0000012729042282444425px;
+}
+.e2302_7031 {
+  background-color: rgba(255, 255, 255, 1);
+  width: 10.983124732971191px;
+  height: 11.458038330078125px;
+  position: absolute;
+  left: 112.08964538574219px;
+  top: 4.093855857849121px;
+}
+.e2302_7032 {
+  background-color: rgba(255, 255, 255, 1);
+  width: 9.883649826049805px;
+  height: 11.255993843078613px;
+  position: absolute;
+  left: 126.1159439086914px;
+  top: 4.082843780517578px;
+}
+.e2302_7033 {
+  background-color: rgba(255, 255, 255, 1);
+  width: 6.640810012817383px;
+  height: 13.839851379394531px;
+  position: absolute;
+  left: 144.75392150878906px;
+  top: 1.5599892139434814px;
+}
+.e2302_7034 {
+  background-color: rgba(255, 255, 255, 1);
+  width: 10.007614135742188px;
+  height: 15.338836669921875px;
+  position: absolute;
+  left: 154.51904296875px;
+  top: 0.0000012729042282444425px;
+}
+.e2302_7035 {
+  background-color: rgba(255, 255, 255, 1);
+  width: 10.563573837280273px;
+  height: 11.484341621398926px;
+  position: absolute;
+  left: 167.4043426513672px;
+  top: 4.093544960021973px;
+}
+.e2302_7083 {
+  width: 225px;
+  height: 480px;
+  position: absolute;
+  left: 595px;
+  top: 125px;
+  background-image: url("../../public/11.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.e2303_7110 {
+  width: 350px;
+  height: 141px;
+  position: absolute;
+  left: 150px;
+  top: 490px;
+  background-image: url("../../public/google-play-badge.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
