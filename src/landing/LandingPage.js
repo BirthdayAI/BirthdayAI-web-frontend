@@ -89,9 +89,12 @@ function LandingPage() {
           <div className="e2302_7001"></div>
         </a>
         <div className="e2302_7083"></div>
-        <Link>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.birthdayaiapp.BirthdayAI"
+          target="_blank"
+        >
           <div className="e2303_7110"></div>
-        </Link>
+        </a>
       </div>
     </body>
   );
